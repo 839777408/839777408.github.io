@@ -22,6 +22,8 @@
             
             <tag> Vue </tag>
             
+            <tag> ES6 </tag>
+            
         </tags>
       
     </entry>
@@ -46,6 +48,8 @@
         <tags>
             
             <tag> Vue </tag>
+            
+            <tag> 组件化 </tag>
             
         </tags>
       
@@ -122,6 +126,8 @@
             
             <tag> Git </tag>
             
+            <tag> GitHub </tag>
+            
         </tags>
       
     </entry>
@@ -137,6 +143,8 @@
       
       
       <categories>
+          
+          <category> Java </category>
           
           <category> JavaWeb </category>
           
@@ -192,6 +200,8 @@
       
       <categories>
           
+          <category> Java </category>
+          
           <category> JavaWeb </category>
           
       </categories>
@@ -226,9 +236,15 @@
       
         <tags>
             
-            <tag> Java </tag>
+            <tag> List </tag>
             
-            <tag> 集合 </tag>
+            <tag> Map </tag>
+            
+            <tag> Set </tag>
+            
+            <tag> Iterator </tag>
+            
+            <tag> Collection </tag>
             
         </tags>
       
@@ -255,9 +271,15 @@
       
         <tags>
             
-            <tag> Java </tag>
+            <tag> Thread </tag>
             
-            <tag> 多线程 </tag>
+            <tag> Synchronized </tag>
+            
+            <tag> Lock </tag>
+            
+            <tag> Runnable </tag>
+            
+            <tag> Callable </tag>
             
         </tags>
       
