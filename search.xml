@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>Vue的模块化开发</title>
-      <link href="posts/e220/"/>
-      <url>posts/e220/</url>
-      
-        <content type="html"><![CDATA[<h1 id="为什么需要模块化"><a href="#为什么需要模块化" class="headerlink" title="为什么需要模块化"></a>为什么需要模块化</h1><h2 id="JavaScript原始功能"><a href="#JavaScript原始功能" class="headerlink" title="JavaScript原始功能"></a>JavaScript原始功能</h2><ul><li>在网页开发的早期，js制作作为一种脚本语言，做一些简单的表单验证或动画实现等，那个时候代码还是很少的。<ul><li>那个时候的代码是怎么写的呢？直接将代码写在<code>&lt;script&gt;</code>标签中即可</li></ul></li></ul><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103193228.png" alt=""></p><ul><li>随着ajax异步请求的出现，慢慢形成了前后端的分离。客户端需要完成的事情越来越多，代码量也是与日俱增。<ul><li>为了应对代码量的剧增，我们通常会将代码组织在多个js文件中，进行维护。</li><li>但是这种维护方式，依然不能避免一些灾难性的问题。比如全局变量同名问题：</li></ul></li></ul><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103192913.png" alt=""></p><blockquote><p>小明后来发现代码不能正常运行，去检查自己的变量，发现确实true，最后杯具发生了，小明加班到2点还是没有找到问题出在哪里。</p></blockquote><ul><li>另外，这种代码的编写方式对js文件的依赖顺序几乎是强制性的。<ul><li>但是当js文件过多，比如有几十个的时候，弄清楚它们的顺序是一件比较痛苦的事情。</li><li>而且即使你弄清楚顺序了，也不能避免上面出现的这种尴尬问题的发生。</li></ul></li></ul><h2 id="匿名函数的解决方案"><a href="#匿名函数的解决方案" class="headerlink" title="匿名函数的解决方案"></a>匿名函数的解决方案</h2><p>我们可以使用匿名函数来解决命名方面的重名问题。</p><p>在aaa.js文件中，我们使用匿名函数：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103193420.png" alt=""></p><p>但是如果我们希望在main.js文件中，用到flag，应该如何处理呢？</p><p>显然，另外一个文件中不容易使用，因为flag是一个局部变量。</p><h2 id="使用模块作为出口"><a href="#使用模块作为出口" class="headerlink" title="使用模块作为出口"></a>使用模块作为出口</h2><p>我们可以使用一个模块作为出口，将需要暴露到外面的变量暴露出去。</p><p>来看下对应的代码：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103194428.png" alt=""></p><p>我们做了什么事情呢？</p><ul><li>非常简单，在匿名函数内部，定义一个对象。</li><li>给对象添加各种需要暴露到外面的属性和方法(不需要暴露的直接定义即可)。</li><li>最后将这个对象返回，并且在外面使用了一个MoudleA（模块）接收。</li></ul><p>接下来，我们在man.js中怎么使用呢？</p><ul><li>我们只需要使用属于自己模块的属性和方法即可。</li></ul><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103194434.png" alt=""></p><p>这就是模块最基础的封装，事实上模块的封装还有很多高级的话题：</p><ul><li>但是我们这里就是要认识一下为什么需要模块，以及模块的原始雏形。</li><li>幸运的是，前端模块化开发已经有了很多既有的规范，以及对应的实现方案。</li></ul><p>常见的模块化规范：<br>CommonJS、AMD、CMD，也有ES6的Modules</p><h1 id="CommonJS（了解）"><a href="#CommonJS（了解）" class="headerlink" title="CommonJS（了解）"></a>CommonJS（了解）</h1><p>模块化有两个核心：导出和导入。</p><p>CommonJS的导出：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103194828.png" alt=""></p><p>CommonJS的导入（require的参数为导出模块的所在文件，后缀可省略）：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103194835.png" alt=""></p><h1 id="ES6的export指令"><a href="#ES6的export指令" class="headerlink" title="ES6的export指令"></a>ES6的export指令</h1><h2 id="export基本使用"><a href="#export基本使用" class="headerlink" title="export基本使用"></a>export基本使用</h2><p>export指令用于导出变量，比如下面的代码：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195120.png" alt=""></p><p>上面的代码还有另外一种写法：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195126.png" alt=""></p><h2 id="导出函数或类"><a href="#导出函数或类" class="headerlink" title="导出函数或类"></a>导出函数或类</h2><p>上面我们主要是输出变量，也可以输出函数或者输出类。</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195132.png" alt=""></p><p>上面的代码还有另外一种写法：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195137.png" alt=""></p><h2 id="export-default"><a href="#export-default" class="headerlink" title="export default"></a>export default</h2><p>某些情况下，一个模块中包含某个的功能，我们并不希望给这个功能命名，而且让导入者可以自己来命名，</p><p>这个时候就可以使用export default：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195143.png" alt=""></p><p>我们来到main.js中，这样使用就可以了：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195149.png" alt=""></p><p>这里的myFunc是自己命名的，你可以根据需要命名它对应的名字。</p><p><code>注意：export default在同一个模块中，不允许同时存在多个。</code></p><h1 id="ES6的import指令"><a href="#ES6的import指令" class="headerlink" title="ES6的import指令"></a>ES6的import指令</h1><p>我们使用export指令导出了模块对外提供的接口，下面我们就可以通过import命令来加载对应的这个模块了。</p><p>首先，我们需要在HTML代码中引入两个js文件，并且类型需要设置为module。</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/20201031100855.png" alt=""></p><p>import指令用于导入模块中的内容，比如main.js的代码：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/20201031100902.png" alt=""></p><p>如果我们希望某个模块中所有的信息都导入，一个个导入显然有些麻烦：<br>通过<code>*</code>可以导入模块中所有的export变量，<br>但是通常情况下我们需要给<code>*</code>起一个别名，方便后续的使用：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/20201031100908.png" alt=""></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Vue </tag>
-            
-            <tag> ES6 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Webpack详解</title>
       <link href="posts/a5d2/"/>
       <url>posts/a5d2/</url>
@@ -50,6 +23,33 @@
             <tag> Vue </tag>
             
             <tag> Webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vue的模块化开发</title>
+      <link href="posts/e220/"/>
+      <url>posts/e220/</url>
+      
+        <content type="html"><![CDATA[<h1 id="为什么需要模块化"><a href="#为什么需要模块化" class="headerlink" title="为什么需要模块化"></a>为什么需要模块化</h1><h2 id="JavaScript原始功能"><a href="#JavaScript原始功能" class="headerlink" title="JavaScript原始功能"></a>JavaScript原始功能</h2><ul><li>在网页开发的早期，js制作作为一种脚本语言，做一些简单的表单验证或动画实现等，那个时候代码还是很少的。<ul><li>那个时候的代码是怎么写的呢？直接将代码写在<code>&lt;script&gt;</code>标签中即可</li></ul></li></ul><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103193228.png" alt=""></p><ul><li>随着ajax异步请求的出现，慢慢形成了前后端的分离。客户端需要完成的事情越来越多，代码量也是与日俱增。<ul><li>为了应对代码量的剧增，我们通常会将代码组织在多个js文件中，进行维护。</li><li>但是这种维护方式，依然不能避免一些灾难性的问题。比如全局变量同名问题：</li></ul></li></ul><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103192913.png" alt=""></p><blockquote><p>小明后来发现代码不能正常运行，去检查自己的变量，发现确实true，最后杯具发生了，小明加班到2点还是没有找到问题出在哪里。</p></blockquote><ul><li>另外，这种代码的编写方式对js文件的依赖顺序几乎是强制性的。<ul><li>但是当js文件过多，比如有几十个的时候，弄清楚它们的顺序是一件比较痛苦的事情。</li><li>而且即使你弄清楚顺序了，也不能避免上面出现的这种尴尬问题的发生。</li></ul></li></ul><h2 id="匿名函数的解决方案"><a href="#匿名函数的解决方案" class="headerlink" title="匿名函数的解决方案"></a>匿名函数的解决方案</h2><p>我们可以使用匿名函数来解决命名方面的重名问题。</p><p>在aaa.js文件中，我们使用匿名函数：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103193420.png" alt=""></p><p>但是如果我们希望在main.js文件中，用到flag，应该如何处理呢？</p><p>显然，另外一个文件中不容易使用，因为flag是一个局部变量。</p><h2 id="使用模块作为出口"><a href="#使用模块作为出口" class="headerlink" title="使用模块作为出口"></a>使用模块作为出口</h2><p>我们可以使用一个模块作为出口，将需要暴露到外面的变量暴露出去。</p><p>来看下对应的代码：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103194428.png" alt=""></p><p>我们做了什么事情呢？</p><ul><li>非常简单，在匿名函数内部，定义一个对象。</li><li>给对象添加各种需要暴露到外面的属性和方法(不需要暴露的直接定义即可)。</li><li>最后将这个对象返回，并且在外面使用了一个MoudleA（模块）接收。</li></ul><p>接下来，我们在man.js中怎么使用呢？</p><ul><li>我们只需要使用属于自己模块的属性和方法即可。</li></ul><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103194434.png" alt=""></p><p>这就是模块最基础的封装，事实上模块的封装还有很多高级的话题：</p><ul><li>但是我们这里就是要认识一下为什么需要模块，以及模块的原始雏形。</li><li>幸运的是，前端模块化开发已经有了很多既有的规范，以及对应的实现方案。</li></ul><p>常见的模块化规范：<br>CommonJS、AMD、CMD，也有ES6的Modules</p><h1 id="CommonJS（了解）"><a href="#CommonJS（了解）" class="headerlink" title="CommonJS（了解）"></a>CommonJS（了解）</h1><p>模块化有两个核心：导出和导入。</p><p>CommonJS的导出：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103194828.png" alt=""></p><p>CommonJS的导入（require的参数为导出模块的所在文件，后缀可省略）：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103194835.png" alt=""></p><h1 id="ES6的export指令"><a href="#ES6的export指令" class="headerlink" title="ES6的export指令"></a>ES6的export指令</h1><h2 id="export基本使用"><a href="#export基本使用" class="headerlink" title="export基本使用"></a>export基本使用</h2><p>export指令用于导出变量，比如下面的代码：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195120.png" alt=""></p><p>上面的代码还有另外一种写法：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195126.png" alt=""></p><h2 id="导出函数或类"><a href="#导出函数或类" class="headerlink" title="导出函数或类"></a>导出函数或类</h2><p>上面我们主要是输出变量，也可以输出函数或者输出类。</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195132.png" alt=""></p><p>上面的代码还有另外一种写法：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195137.png" alt=""></p><h2 id="export-default"><a href="#export-default" class="headerlink" title="export default"></a>export default</h2><p>某些情况下，一个模块中包含某个的功能，我们并不希望给这个功能命名，而且让导入者可以自己来命名，</p><p>这个时候就可以使用export default：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195143.png" alt=""></p><p>我们来到main.js中，这样使用就可以了：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/2020103195149.png" alt=""></p><p>这里的myFunc是自己命名的，你可以根据需要命名它对应的名字。</p><p><code>注意：export default在同一个模块中，不允许同时存在多个。</code></p><h1 id="ES6的import指令"><a href="#ES6的import指令" class="headerlink" title="ES6的import指令"></a>ES6的import指令</h1><p>我们使用export指令导出了模块对外提供的接口，下面我们就可以通过import命令来加载对应的这个模块了。</p><p>首先，我们需要在HTML代码中引入两个js文件，并且类型需要设置为module。</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/20201031100855.png" alt=""></p><p>import指令用于导入模块中的内容，比如main.js的代码：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/20201031100902.png" alt=""></p><p>如果我们希望某个模块中所有的信息都导入，一个个导入显然有些麻烦：<br>通过<code>*</code>可以导入模块中所有的export变量，<br>但是通常情况下我们需要给<code>*</code>起一个别名，方便后续的使用：</p><p><img src= "https://cdn.jsdelivr.net/gh/839777408/tupian/img/load.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/839777408/tupian/blog2/20201031100908.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+            <tag> ES6 </tag>
             
         </tags>
       
