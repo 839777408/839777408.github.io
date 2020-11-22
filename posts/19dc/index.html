@@ -238,9 +238,7 @@ var saveToLocal = {
 <blockquote>
 <p><strong>注意事项：</strong><br>我们通过提交mutation的方式改变state里的状态属性，而非直接改变store.state.count的值。<br>这是因为Vuex可以通过提交mutation的方式更明确的追踪状态的变化。</p>
 </blockquote>
-<h1 id="State"><a href="#State" class="headerlink" title="State"></a>State</h1><blockquote>
-<p>通过获取state。</p>
-</blockquote>
+<h1 id="State"><a href="#State" class="headerlink" title="State"></a>State</h1><p><strong>通过获取state。</strong></p>
 <p>Vuex提出使用单一状态树，英文名称是Single Source of Truth，也可以翻译成单一数据源。</p>
 <p>用一个生活中的例子做一个简单的类比：</p>
 <ul>
@@ -254,9 +252,7 @@ var saveToLocal = {
 <li>所以Vuex也使用了单一状态树来管理应用层级的全部状态。</li>
 <li>单一状态树能够让我们最直接地找到某个状态的片段，而且在之后的维护和调试过程中，也可以非常方便地管理和维护。</li>
 </ul>
-<h1 id="Getters"><a href="#Getters" class="headerlink" title="Getters"></a>Getters</h1><blockquote>
-<p>通过获取getters。传参在后面加括号传递。</p>
-</blockquote>
+<h1 id="Getters"><a href="#Getters" class="headerlink" title="Getters"></a>Getters</h1><p><strong>通过获取getters。传参在后面加括号传递。</strong></p>
 <p>有时候我们需要从store中获取一些state派生后的状态，可以通过getters（可以认为是 store 的计算属性，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。），比如下面的Store中：</p>
 <ul>
 <li><p>获取所有年龄大于24岁的学生列表：<code>more24Stu(state)</code></p>
