@@ -11,7 +11,7 @@
   <url>
     <loc>https://nanzx.top/posts/a7fd/</loc>
     
-    <lastmod>2020-11-19</lastmod>
+    <lastmod>2020-11-22</lastmod>
     
   </url>
   
@@ -550,14 +550,14 @@
   </url>
   
   <url>
-    <loc>https://nanzx.top/tags/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/</loc>
+    <loc>https://nanzx.top/tags/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
     <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nanzx.top/tags/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    <loc>https://nanzx.top/tags/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -704,13 +704,6 @@
   </url>
   
   <url>
-    <loc>https://nanzx.top/tags/400%E7%8A%B6%E6%80%81%E7%A0%81/</loc>
-    <lastmod>2020-11-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nanzx.top/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
@@ -838,6 +831,27 @@
   
   <url>
     <loc>https://nanzx.top/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    <lastmod>2020-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanzx.top/tags/mavon-editor/</loc>
+    <lastmod>2020-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanzx.top/tags/AutoGenerator/</loc>
+    <lastmod>2020-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanzx.top/tags/HandlerInterceptor/</loc>
     <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -986,14 +1000,14 @@
   </url>
   
   <url>
-    <loc>https://nanzx.top/categories/Java/JavaWeb/</loc>
+    <loc>https://nanzx.top/categories/Python/%E7%88%AC%E8%99%AB/</loc>
     <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nanzx.top/categories/Python/%E7%88%AC%E8%99%AB/</loc>
+    <loc>https://nanzx.top/categories/Java/JavaWeb/</loc>
     <lastmod>2020-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
