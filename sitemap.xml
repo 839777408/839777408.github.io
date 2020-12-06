@@ -690,13 +690,6 @@
   </url>
   
   <url>
-    <loc>https://nanzx.top/tags/%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</loc>
-    <lastmod>2020-12-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nanzx.top/tags/%E7%BA%BF%E6%80%A7%E6%9F%A5%E6%89%BE/</loc>
     <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
@@ -712,6 +705,13 @@
   
   <url>
     <loc>https://nanzx.top/tags/%E6%8F%92%E5%80%BC%E6%9F%A5%E6%89%BE/</loc>
+    <lastmod>2020-12-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanzx.top/tags/%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -739,13 +739,6 @@
   </url>
   
   <url>
-    <loc>https://nanzx.top/tags/Vue/</loc>
-    <lastmod>2020-12-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nanzx.top/tags/%E9%80%92%E5%BD%92/</loc>
     <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
@@ -761,6 +754,13 @@
   
   <url>
     <loc>https://nanzx.top/tags/%E5%85%AB%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2020-12-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanzx.top/tags/Vue/</loc>
     <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -809,13 +809,6 @@
   </url>
   
   <url>
-    <loc>https://nanzx.top/tags/Vue-Router/</loc>
-    <lastmod>2020-12-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nanzx.top/tags/Vuex/</loc>
     <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
@@ -830,6 +823,13 @@
   </url>
   
   <url>
+    <loc>https://nanzx.top/tags/Vue-Router/</loc>
+    <lastmod>2020-12-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://nanzx.top/tags/%E7%BB%84%E4%BB%B6%E5%8C%96/</loc>
     <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
@@ -837,14 +837,14 @@
   </url>
   
   <url>
-    <loc>https://nanzx.top/tags/web%E5%AE%89%E5%85%A8/</loc>
+    <loc>https://nanzx.top/tags/Webpack/</loc>
     <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nanzx.top/tags/Webpack/</loc>
+    <loc>https://nanzx.top/tags/web%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2020-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
