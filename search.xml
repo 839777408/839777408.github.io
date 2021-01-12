@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>前端的一些笔记</title>
+      <link href="posts/261b/"/>
+      <url>posts/261b/</url>
+      
+        <content type="html"><![CDATA[<h1 id="div填充整个页面"><a href="#div填充整个页面" class="headerlink" title="div填充整个页面"></a>div填充整个页面</h1><ul><li>解决小白边</li></ul><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="div位置移动"><a href="#div位置移动" class="headerlink" title="div位置移动"></a>div位置移动</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box-card1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">520px</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">430px</span>;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">140px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="背景图填充整个div"><a href="#背景图填充整个div" class="headerlink" title="背景图填充整个div"></a>背景图填充整个div</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.login</span>&#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&quot;https://cdn.jsdelivr.net/gh/839777408/tupian/img/3标签.jpg&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Druid数据源的使用</title>
       <link href="posts/13be/"/>
       <url>posts/13be/</url>
