@@ -1,0 +1,6 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://nanzx.top/sitemap.xml
+Sitemap: https://nanzx.top/baidusitemap.xml
