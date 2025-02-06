@@ -1,0 +1,485 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Daily Support | Nan</title><meta name="author" content="阿楠"><meta name="copyright" content="阿楠"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Notepad++行前行尾添加字符：  按Ctrl + H 打开替换窗口 查找模式选择正则表达式 输入 ^  行前添加字符串 输入 $  行尾添加字符串  删除包含某字符串的行：  按Ctrl + H 打开替换窗口 查找模式选择正则表达式 查找目标输入.*DROP.*，DROP是想替换的关键词 全部替换  删除空白行：  按Ctrl + H 打开替换窗口 查找模式选择正则表达式 查找目标输入^\s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Daily Support">
+<meta property="og:url" content="https://nanzx.gitee.io/posts/24756/index.html">
+<meta property="og:site_name" content="Nan">
+<meta property="og:description" content="Notepad++行前行尾添加字符：  按Ctrl + H 打开替换窗口 查找模式选择正则表达式 输入 ^  行前添加字符串 输入 $  行尾添加字符串  删除包含某字符串的行：  按Ctrl + H 打开替换窗口 查找模式选择正则表达式 查找目标输入.*DROP.*，DROP是想替换的关键词 全部替换  删除空白行：  按Ctrl + H 打开替换窗口 查找模式选择正则表达式 查找目标输入^\s">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://unpkg.com/nan-picture/img/wp9.jpg">
+<meta property="article:published_time" content="2022-05-09T19:31:40.000Z">
+<meta property="article:modified_time" content="2023-07-28T16:05:44.000Z">
+<meta property="article:author" content="阿楠">
+<meta property="article:tag" content="总结">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://unpkg.com/nan-picture/img/wp9.jpg"><link rel="shortcut icon" href="https://unpkg.com/nan-picture/img/fav.jpg"><link rel="canonical" href="https://nanzx.gitee.io/posts/24756/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Daily Support',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-28 16:05:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="./css/iconfont.css"><link rel="stylesheet" href="./css/background.css"><link rel="stylesheet" href="./css/ahzoo.css"><link rel="stylesheet" href="./css/aplayer.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://unpkg.com/nan-picture/img/head.jpg" onerror="onerror=null;src='https://unpkg.com/nan-picture/img/load.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">104</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="https://nanzx.gitee.io"><i class="fa-fw fas fa-rocket"></i><span> 镜像</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Nan"><span class="site-name">Nan</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="https://nanzx.gitee.io"><i class="fa-fw fas fa-rocket"></i><span> 镜像</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Daily Support</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-09T19:31:40.000Z" title="发表于 2022-05-09 19:31:40">2022-05-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-28T16:05:44.000Z" title="更新于 2023-07-28 16:05:44">2023-07-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%80%BB%E7%BB%93/">总结</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Daily Support"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/24756/#post-comment"><span id="twikoo-count"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div><article class="post-content" id="article-container"><h1 id="Notepad"><a href="#Notepad" class="headerlink" title="Notepad++"></a>Notepad++</h1><p><strong>行前行尾添加字符：</strong></p>
+<ol>
+<li>按Ctrl + H 打开替换窗口</li>
+<li>查找模式选择正则表达式</li>
+<li>输入 ^  行前添加字符串</li>
+<li>输入 $  行尾添加字符串</li>
+</ol>
+<p><strong>删除包含某字符串的行：</strong></p>
+<ol>
+<li>按Ctrl + H 打开替换窗口</li>
+<li>查找模式选择正则表达式</li>
+<li>查找目标输入<code>.*DROP.*</code>，DROP是想替换的关键词</li>
+<li>全部替换</li>
+</ol>
+<p><strong>删除空白行：</strong></p>
+<ol>
+<li>按Ctrl + H 打开替换窗口</li>
+<li>查找模式选择正则表达式</li>
+<li>查找目标输入<code>^\s</code> </li>
+<li>全部替换</li>
+</ol>
+<p><strong>下划线转驼峰：</strong></p>
+<ol>
+<li>按Ctrl + H 打开替换窗口</li>
+<li>查找模式选择正则表达式</li>
+<li>查找目标输入<code>_([a-z])</code> </li>
+<li>替换为<code>\U\1\E</code></li>
+<li>全部替换</li>
+</ol>
+<hr>
+<h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="操作前的判断"><a href="#操作前的判断" class="headerlink" title="操作前的判断"></a>操作前的判断</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">#创建表前的判断</span><br><span class="line">USE [db_test]</span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">IF  <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">FROM</span> dbo.sysobjects <span class="keyword">WHERE</span> type <span class="operator">=</span> <span class="string">&#x27;U&#x27;</span> <span class="keyword">AND</span> name <span class="operator">=</span> <span class="string">&#x27;table_name&#x27;</span>)</span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">		<span class="keyword">DROP</span> <span class="keyword">TABLE</span> [dbo].[table_name]</span><br><span class="line">	<span class="keyword">END</span></span><br><span class="line"></span><br><span class="line">#创建存储过程前的判断</span><br><span class="line">USE [db_test]</span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">IF <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">FROM</span> dbo.sysobjects <span class="keyword">WHERE</span> id <span class="operator">=</span> OBJECT_ID(N<span class="string">&#x27;[dbo].[sp_name]&#x27;</span>) <span class="keyword">AND</span> OBJECTPROPERTY(id, N<span class="string">&#x27;IsProcedure&#x27;</span>) <span class="operator">=</span> <span class="number">1</span>)</span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">		<span class="keyword">DROP</span> <span class="keyword">PROCEDURE</span> [dbo].[sp_name]</span><br><span class="line">	<span class="keyword">END</span></span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">#添加表字段前的判断</span><br><span class="line">USE [db_test]</span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">FROM</span> sys.columns <span class="keyword">WHERE</span> object_id <span class="operator">=</span> OBJECT_ID(N<span class="string">&#x27;[dbo].[table_name]&#x27;</span>) <span class="keyword">AND</span> name <span class="operator">=</span> <span class="string">&#x27;column_name&#x27;</span>)</span><br><span class="line">    <span class="keyword">BEGIN</span></span><br><span class="line">    	<span class="keyword">ALTER</span> <span class="keyword">TABLE</span> dbo.table_name <span class="keyword">ADD</span> column_name <span class="type">char</span>(<span class="number">2</span>) <span class="keyword">NULL</span></span><br><span class="line">    <span class="keyword">END</span></span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">#创建触发器前的判断</span><br><span class="line">USE [db_test]</span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">IF OBJECT_ID (<span class="string">&#x27;dbo.trigger_name&#x27;</span>, <span class="string">&#x27;TR&#x27;</span>) <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">		<span class="keyword">DROP</span> <span class="keyword">TRIGGER</span> [dbo].[trigger_name]</span><br><span class="line">	<span class="keyword">END</span></span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">#创建索引前的判断</span><br><span class="line">USE [db_test]</span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>(<span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">FROM</span> sysindexes <span class="keyword">WHERE</span> id <span class="operator">=</span> OBJECT_ID(<span class="string">&#x27;table_name&#x27;</span>) <span class="keyword">AND</span> name <span class="operator">=</span> <span class="string">&#x27;index_name&#x27;</span>)</span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">		<span class="keyword">DROP</span> INDEX table_name.index_name</span><br><span class="line">	<span class="keyword">END</span></span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h2 id="索引的操作"><a href="#索引的操作" class="headerlink" title="索引的操作"></a>索引的操作</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 删除主键</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> db_test.table_name <span class="keyword">drop</span> <span class="keyword">constraint</span> index_name</span><br><span class="line"></span><br><span class="line"># 删除普通索引</span><br><span class="line"><span class="keyword">DROP</span> index index_name <span class="keyword">on</span> db_test.table_name</span><br><span class="line"></span><br><span class="line"># 新建唯一索引</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> INDEX index_name <span class="keyword">ON</span> db_test.table_name (seq)</span><br><span class="line"></span><br><span class="line"># 新建主键</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> db_test.table_name <span class="keyword">add</span> <span class="keyword">constraint</span> index_name <span class="keyword">PRIMARY</span> key(seq)</span><br></pre></td></tr></table></figure>
+
+<h2 id="列的操作"><a href="#列的操作" class="headerlink" title="列的操作"></a>列的操作</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 重命名列名，索引中的列名会自动更改</span><br><span class="line"><span class="keyword">EXEC</span> sp_rename <span class="string">&#x27;db_test.table_name.id_type&#x27;</span>,<span class="string">&#x27;id_type_before&#x27;</span>,<span class="string">&#x27;COLUMN&#x27;</span></span><br><span class="line"></span><br><span class="line"># 更改列的类型</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> db_test.table_name <span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> id_type_before <span class="type">char</span>(<span class="number">24</span>) <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line"># 新增列</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> db_test.table_name <span class="keyword">ADD</span> id_type_before <span class="type">varchar</span>(<span class="number">10</span>) <span class="keyword">NULL</span></span><br><span class="line"></span><br><span class="line"># 删除列</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> db_test.table_name <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> id_type_before</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取下一个sequence"><a href="#获取下一个sequence" class="headerlink" title="获取下一个sequence"></a>获取下一个sequence</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">sql</span> server</span><br><span class="line"><span class="keyword">declare</span> <span class="variable">@tm_new_detail_id</span> <span class="type">numeric</span>(<span class="number">20</span>, <span class="number">0</span>)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="variable">@tm_new_detail_id</span> <span class="operator">=</span> <span class="keyword">CONVERT</span>(<span class="type">numeric</span>(<span class="number">20</span>, <span class="number">0</span>), NEXT <span class="keyword">VALUE</span> <span class="keyword">FOR</span> db_test.seq_name)</span><br><span class="line"></span><br><span class="line">#SYBASE</span><br><span class="line"><span class="keyword">declare</span> <span class="variable">@new_cust_detail_id</span> unsigned <span class="type">bigint</span></span><br><span class="line"><span class="keyword">select</span> <span class="variable">@new_cust_detail_id</span> <span class="operator">=</span> <span class="keyword">convert</span>(unsigned <span class="type">bigint</span>, reserve_identity(<span class="string">&#x27;seq_name&#x27;</span>,<span class="number">1</span>)) </span><br></pre></td></tr></table></figure>
+
+<h2 id="查看表锁级别"><a href="#查看表锁级别" class="headerlink" title="查看表锁级别"></a>查看表锁级别</h2><p><code>select lockscheme(&#39;db_test..table_name&#39;)</code></p>
+<h2 id="查包含某字符串的存储过程"><a href="#查包含某字符串的存储过程" class="headerlink" title="查包含某字符串的存储过程"></a>查包含某字符串的存储过程</h2><p><code>select distinct object_name(id) from syscomments where id in(select id from sysobjects where type =&#39;P&#39;) and text like &#39;%find_string%&#39;</code></p>
+<h2 id="查看不包含数字"><a href="#查看不包含数字" class="headerlink" title="查看不包含数字"></a>查看不包含数字</h2><p><code>select * from customer a where PATINDEX(&#39;%[0-9]%&#39;, a.name) = 0 </code></p>
+<h2 id="查询SQL执行时CPU的占用情况"><a href="#查询SQL执行时CPU的占用情况" class="headerlink" title="查询SQL执行时CPU的占用情况"></a>查询SQL执行时CPU的占用情况</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">WITH</span> AggregatedCPU <span class="keyword">AS</span> (<span class="keyword">SELECT</span> q.query_hash, <span class="built_in">SUM</span>(count_executions <span class="operator">*</span> avg_cpu_time <span class="operator">/</span> <span class="number">1000.0</span>) <span class="keyword">AS</span> total_cpu_millisec, <span class="built_in">SUM</span>(count_executions <span class="operator">*</span> avg_cpu_time <span class="operator">/</span> <span class="number">1000.0</span>)<span class="operator">/</span> <span class="built_in">SUM</span>(count_executions) <span class="keyword">AS</span> avg_cpu_millisec, <span class="built_in">MAX</span>(rs.max_cpu_time <span class="operator">/</span> <span class="number">1000.00</span>) <span class="keyword">AS</span> max_cpu_millisec, <span class="built_in">MIN</span>(rs.min_cpu_time <span class="operator">/</span> <span class="number">1000.00</span>) <span class="keyword">AS</span> min_cpu_millisec,<span class="built_in">MAX</span>(max_logical_io_reads) max_logical_reads, <span class="built_in">COUNT</span>(<span class="keyword">DISTINCT</span> p.plan_id) <span class="keyword">AS</span> number_of_distinct_plans, <span class="built_in">COUNT</span>(<span class="keyword">DISTINCT</span> p.query_id) <span class="keyword">AS</span> number_of_distinct_query_ids, <span class="built_in">SUM</span>(<span class="keyword">CASE</span> <span class="keyword">WHEN</span> rs.execution_type_desc<span class="operator">=</span><span class="string">&#x27;Aborted&#x27;</span> <span class="keyword">THEN</span> count_executions <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>) <span class="keyword">AS</span> Aborted_Execution_Count, <span class="built_in">SUM</span>(<span class="keyword">CASE</span> <span class="keyword">WHEN</span> rs.execution_type_desc<span class="operator">=</span><span class="string">&#x27;Regular&#x27;</span> <span class="keyword">THEN</span> count_executions <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>) <span class="keyword">AS</span> Regular_Execution_Count, <span class="built_in">SUM</span>(<span class="keyword">CASE</span> <span class="keyword">WHEN</span> rs.execution_type_desc<span class="operator">=</span><span class="string">&#x27;Exception&#x27;</span> <span class="keyword">THEN</span> count_executions <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>) <span class="keyword">AS</span> Exception_Execution_Count, <span class="built_in">SUM</span>(count_executions) <span class="keyword">AS</span> total_executions, <span class="built_in">MIN</span>(qt.query_sql_text) <span class="keyword">AS</span> sampled_query_text</span><br><span class="line"><span class="keyword">FROM</span> sys.query_store_query_text <span class="keyword">AS</span> qt</span><br><span class="line"><span class="keyword">JOIN</span> sys.query_store_query <span class="keyword">AS</span> q <span class="keyword">ON</span> qt.query_text_id<span class="operator">=</span>q.query_text_id</span><br><span class="line"><span class="keyword">JOIN</span> sys.query_store_plan <span class="keyword">AS</span> p <span class="keyword">ON</span> q.query_id<span class="operator">=</span>p.query_id</span><br><span class="line"><span class="keyword">JOIN</span> sys.query_store_runtime_stats <span class="keyword">AS</span> rs <span class="keyword">ON</span> rs.plan_id<span class="operator">=</span>p.plan_id</span><br><span class="line"><span class="keyword">JOIN</span> sys.query_store_runtime_stats_interval <span class="keyword">AS</span> rsi <span class="keyword">ON</span> rsi.runtime_stats_interval_id<span class="operator">=</span>rs.runtime_stats_interval_id</span><br><span class="line"><span class="keyword">WHERE</span> rs.execution_type_desc <span class="keyword">IN</span> (<span class="string">&#x27;Regular&#x27;</span>, <span class="string">&#x27;Aborted&#x27;</span>, <span class="string">&#x27;Exception&#x27;</span>)<span class="keyword">AND</span> rsi.start_time<span class="operator">&gt;=</span><span class="string">&#x27;2022-05-09 06:00:00&#x27;</span> <span class="comment">--AND rsi.start_time&lt;=&#x27;2021-10-28 05:00:00&#x27;</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> q.query_hash), OrderedCPU <span class="keyword">AS</span> (<span class="keyword">SELECT</span> query_hash, total_cpu_millisec, avg_cpu_millisec, max_cpu_millisec, min_cpu_millisec,max_logical_reads, number_of_distinct_plans, number_of_distinct_query_ids, total_executions, Aborted_Execution_Count, Regular_Execution_Count, Exception_Execution_Count, sampled_query_text, <span class="built_in">ROW_NUMBER</span>() <span class="keyword">OVER</span> (<span class="keyword">ORDER</span> <span class="keyword">BY</span> total_cpu_millisec <span class="keyword">DESC</span>, query_hash <span class="keyword">ASC</span>) <span class="keyword">AS</span> RN</span><br><span class="line"><span class="keyword">FROM</span> AggregatedCPU)</span><br><span class="line"><span class="keyword">SELECT</span> OD.query_hash, OD.total_cpu_millisec, OD.avg_cpu_millisec, OD.max_cpu_millisec, OD.min_cpu_millisec,OD.max_logical_reads, OD.number_of_distinct_plans, OD.number_of_distinct_query_ids, OD.total_executions, OD.Aborted_Execution_Count, OD.Regular_Execution_Count, OD.Exception_Execution_Count, OD.sampled_query_text, OD.RN</span><br><span class="line"><span class="keyword">FROM</span> OrderedCPU <span class="keyword">AS</span> OD</span><br><span class="line"><span class="keyword">WHERE</span> OD.RN<span class="operator">&lt;=</span><span class="number">100</span> <span class="comment">-- and sampled_query_text like &#x27;%VS9251B%&#x27;</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> total_cpu_millisec <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="触发器记录数据的IUD操作"><a href="#触发器记录数据的IUD操作" class="headerlink" title="触发器记录数据的IUD操作"></a>触发器记录数据的IUD操作</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line">#创建日志表</span><br><span class="line">USE [db_test]</span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line"><span class="keyword">SET</span> ANSI_NULLS <span class="keyword">ON</span></span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line"><span class="keyword">SET</span> QUOTED_IDENTIFIER <span class="keyword">ON</span></span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">IF  <span class="keyword">exists</span> (<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> sysobjects <span class="keyword">where</span> type <span class="operator">=</span> <span class="string">&#x27;U&#x27;</span> <span class="keyword">and</span> name <span class="operator">=</span> <span class="string">&#x27;table_name&#x27;</span>)</span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">		<span class="keyword">DROP</span> <span class="keyword">TABLE</span> [dbo].[table_name]</span><br><span class="line">	<span class="keyword">END</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> [dbo].[table_name_log]</span><br><span class="line">(</span><br><span class="line">    [file_content] [<span class="type">char</span>](<span class="number">150</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">    [spid] <span class="type">int</span> <span class="keyword">NULL</span>,</span><br><span class="line">    [prog_name] [<span class="type">varchar</span>](<span class="number">100</span>) <span class="keyword">NULL</span>,</span><br><span class="line">    [user_name] [<span class="type">varchar</span>](<span class="number">100</span>) <span class="keyword">NULL</span>,</span><br><span class="line">    [hostname] <span class="type">varchar</span>(<span class="number">100</span>) <span class="keyword">NULL</span>,</span><br><span class="line">    [ip_address] <span class="type">varchar</span>(<span class="number">100</span>) <span class="keyword">NULL</span>,</span><br><span class="line">    [action_type] [<span class="type">varchar</span>](<span class="number">40</span>)  <span class="keyword">NULL</span>,</span><br><span class="line">    [update_time] [datetime]  <span class="keyword">NULL</span></span><br><span class="line">)</span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">#创建触发器</span><br><span class="line">USE [db_test]</span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">IF OBJECT_ID (<span class="string">&#x27;dbo.trigger_name&#x27;</span>, <span class="string">&#x27;TR&#x27;</span>) <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">		<span class="keyword">DROP</span> <span class="keyword">TRIGGER</span> [dbo].[trigger_name]</span><br><span class="line">	<span class="keyword">END</span></span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line"><span class="keyword">SET</span> ANSI_NULLS <span class="keyword">ON</span></span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line"><span class="keyword">SET</span> QUOTED_IDENTIFIER <span class="keyword">ON</span></span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> [dbo].[trigger_name]</span><br><span class="line"><span class="keyword">ON</span> [dbo].[table_name] <span class="keyword">FOR</span> <span class="keyword">UPDATE</span>,<span class="keyword">INSERT</span>,<span class="keyword">DELETE</span></span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="variable">@op</span> <span class="type">varchar</span>(<span class="number">10</span>)</span><br><span class="line"><span class="keyword">select</span> <span class="variable">@op</span><span class="operator">=</span><span class="keyword">case</span> <span class="keyword">when</span> <span class="keyword">exists</span>(<span class="keyword">select</span> <span class="number">1</span> <span class="keyword">from</span> inserted) <span class="keyword">and</span> <span class="keyword">exists</span>(<span class="keyword">select</span> <span class="number">1</span> <span class="keyword">from</span> deleted)</span><br><span class="line">                    <span class="keyword">then</span> <span class="string">&#x27;Update&#x27;</span></span><br><span class="line">                <span class="keyword">when</span> <span class="keyword">exists</span>(<span class="keyword">select</span> <span class="number">1</span> <span class="keyword">from</span> inserted) <span class="keyword">and</span> <span class="keyword">not</span> <span class="keyword">exists</span>(<span class="keyword">select</span> <span class="number">1</span> <span class="keyword">from</span> deleted)</span><br><span class="line">                    <span class="keyword">then</span> <span class="string">&#x27;Insert&#x27;</span></span><br><span class="line">                <span class="keyword">when</span> <span class="keyword">not</span> <span class="keyword">exists</span>(<span class="keyword">select</span> <span class="number">1</span> <span class="keyword">from</span> inserted) <span class="keyword">and</span> <span class="keyword">exists</span>(<span class="keyword">select</span> <span class="number">1</span> <span class="keyword">from</span> deleted)</span><br><span class="line">                    <span class="keyword">then</span> <span class="string">&#x27;Delete&#x27;</span> <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">if <span class="variable">@op</span> <span class="operator">=</span> <span class="string">&#x27;Update&#x27;</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">insert</span> <span class="keyword">into</span> [dbo].[table_name_log]</span><br><span class="line">        (file_content,spid,prog_name,user_name,hostname,ip_address,action_type,update_time)</span><br><span class="line">        <span class="keyword">select</span> file_content,</span><br><span class="line">               @<span class="variable">@spid</span>,</span><br><span class="line">               (<span class="keyword">select</span> program_name <span class="keyword">as</span> prog_name <span class="keyword">from</span> sys.dm_exec_sessions <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> login_name <span class="keyword">as</span> user_name <span class="keyword">from</span> sys.dm_exec_sessions <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> hostname <span class="keyword">as</span> hostname <span class="keyword">from</span> sys.sysprocesses <span class="keyword">where</span> spid<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> client_net_address <span class="keyword">as</span> ip_address <span class="keyword">from</span> sys.dm_exec_connections <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               <span class="string">&#x27;Before Update&#x27;</span>,</span><br><span class="line">               getdate()</span><br><span class="line">        <span class="keyword">from</span> deleted</span><br><span class="line"></span><br><span class="line">        <span class="keyword">insert</span> <span class="keyword">into</span> [dbo].[table_name_log]</span><br><span class="line">        (file_content,spid,prog_name,user_name,hostname,ip_address,action_type,update_time)</span><br><span class="line">        <span class="keyword">select</span> file_content,</span><br><span class="line">               @<span class="variable">@spid</span>,</span><br><span class="line">               (<span class="keyword">select</span> program_name <span class="keyword">as</span> prog_name <span class="keyword">from</span> sys.dm_exec_sessions <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> login_name <span class="keyword">as</span> user_name <span class="keyword">from</span> sys.dm_exec_sessions <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> hostname <span class="keyword">as</span> hostname <span class="keyword">from</span> sys.sysprocesses <span class="keyword">where</span> spid<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> client_net_address <span class="keyword">as</span> ip_address <span class="keyword">from</span> sys.dm_exec_connections <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               <span class="string">&#x27;After Update&#x27;</span>,</span><br><span class="line">               getdate()</span><br><span class="line">        <span class="keyword">from</span> inserted</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">else</span> if <span class="variable">@op</span> <span class="operator">=</span> <span class="string">&#x27;Delete&#x27;</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">insert</span> <span class="keyword">into</span> [dbo].[table_name_log]</span><br><span class="line">        (file_content,spid,prog_name,user_name,hostname,ip_address,action_type,update_time)</span><br><span class="line">        <span class="keyword">select</span> file_content,</span><br><span class="line">               @<span class="variable">@spid</span>,</span><br><span class="line">               (<span class="keyword">select</span> program_name <span class="keyword">as</span> prog_name <span class="keyword">from</span> sys.dm_exec_sessions <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> login_name <span class="keyword">as</span> user_name <span class="keyword">from</span> sys.dm_exec_sessions <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> hostname <span class="keyword">as</span> hostname <span class="keyword">from</span> sys.sysprocesses <span class="keyword">where</span> spid<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> client_net_address <span class="keyword">as</span> ip_address <span class="keyword">from</span> sys.dm_exec_connections <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               <span class="variable">@op</span>,</span><br><span class="line">               getdate()</span><br><span class="line">        <span class="keyword">from</span> deleted</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">insert</span> <span class="keyword">into</span> [dbo].[table_name_log]</span><br><span class="line">        (file_content,spid,prog_name,user_name,hostname,ip_address,action_type,update_time)</span><br><span class="line">        <span class="keyword">select</span> file_content,</span><br><span class="line">               @<span class="variable">@spid</span>,</span><br><span class="line">               (<span class="keyword">select</span> program_name <span class="keyword">as</span> prog_name <span class="keyword">from</span> sys.dm_exec_sessions <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> login_name <span class="keyword">as</span> user_name <span class="keyword">from</span> sys.dm_exec_sessions <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> hostname <span class="keyword">as</span> hostname <span class="keyword">from</span> sys.sysprocesses <span class="keyword">where</span> spid<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               (<span class="keyword">select</span> client_net_address <span class="keyword">as</span> ip_address <span class="keyword">from</span> sys.dm_exec_connections <span class="keyword">where</span> session_id<span class="operator">=</span>@<span class="variable">@spid</span>),</span><br><span class="line">               <span class="variable">@op</span>,</span><br><span class="line">               getdate()</span><br><span class="line">        <span class="keyword">from</span> inserted</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">END</span></span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看数据库指定schema下所有表是否有主键约束和唯一索引-SQL-Server"><a href="#查看数据库指定schema下所有表是否有主键约束和唯一索引-SQL-Server" class="headerlink" title="查看数据库指定schema下所有表是否有主键约束和唯一索引(SQL Server)"></a>查看数据库指定schema下所有表是否有主键约束和唯一索引(SQL Server)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> s.name <span class="operator">+</span> <span class="string">&#x27;.&#x27;</span> <span class="operator">+</span> t.name <span class="keyword">AS</span> table_name,</span><br><span class="line">(<span class="keyword">case</span> <span class="keyword">when</span> (<span class="keyword">select</span> <span class="built_in">count</span>(<span class="number">1</span>) <span class="keyword">from</span> sys.indexes i <span class="keyword">where</span>  t.object_id <span class="operator">=</span> i.object_id <span class="keyword">and</span> is_unique <span class="operator">=</span> <span class="number">1</span>) <span class="operator">&gt;=</span><span class="number">1</span> <span class="keyword">then</span> <span class="string">&#x27;1&#x27;</span> <span class="keyword">else</span> <span class="string">&#x27;0&#x27;</span> <span class="keyword">end</span>) <span class="keyword">as</span> has_unique,</span><br><span class="line">(<span class="keyword">case</span> <span class="keyword">when</span> (<span class="keyword">select</span> <span class="built_in">count</span>(<span class="number">1</span>) <span class="keyword">from</span> sys.indexes i <span class="keyword">where</span>  t.object_id <span class="operator">=</span> i.object_id <span class="keyword">and</span> is_primary_key <span class="operator">=</span> <span class="number">1</span>) <span class="operator">&gt;=</span><span class="number">1</span> <span class="keyword">then</span> <span class="string">&#x27;1&#x27;</span> <span class="keyword">else</span> <span class="string">&#x27;0&#x27;</span> <span class="keyword">end</span>) <span class="keyword">as</span> has_primary</span><br><span class="line"><span class="keyword">FROM</span> sys.tables t</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> sys.schemas s <span class="keyword">ON</span> t.schema_id <span class="operator">=</span> s.schema_id</span><br><span class="line"><span class="keyword">WHERE</span> t.type <span class="operator">=</span> <span class="string">&#x27;U&#x27;</span> <span class="keyword">and</span> s.name <span class="operator">=</span> <span class="string">&#x27;dbo&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="ISNULL与NULLIF函数区别-SQL-Server"><a href="#ISNULL与NULLIF函数区别-SQL-Server" class="headerlink" title="ISNULL与NULLIF函数区别(SQL Server)"></a>ISNULL与NULLIF函数区别(SQL Server)</h2><p><code>ISNULL(check_expression, replacement_value)</code></p>
+<ul>
+<li>如果 check_expression 为 NULL，则返回 replacement_value</li>
+<li>如果 check_expression 不为 NULL，则返回 check_expression</li>
+</ul>
+<p><code>NULLIF(expression, expression)</code></p>
+<ul>
+<li>如果两个 expression 相等，则返回 NULL，该 NULL 为第一个 expression 的数据类型</li>
+<li>如果两个 expression 不相等，则返回第一个 expression</li>
+</ul>
+<h2 id="存储过程的两个参数-QUOTED-IDENTIFIER-和-ANSI-NULLS"><a href="#存储过程的两个参数-QUOTED-IDENTIFIER-和-ANSI-NULLS" class="headerlink" title="存储过程的两个参数(QUOTED_IDENTIFIER 和 ANSI_NULLS)"></a>存储过程的两个参数(QUOTED_IDENTIFIER 和 ANSI_NULLS)</h2><p><code>QUOTED_IDENTIFIER</code></p>
+<ul>
+<li>SET QUOTED_IDENTIFIER ON：与系统关键字重复的，允许使用双引号括起来，就能正常使用。注意是双引号</li>
+<li>SET QUOTED_IDENTIFIER OFF：与系统关键字重复的，不允许使用</li>
+</ul>
+<p><code>ANSI_NULLS</code></p>
+<ul>
+<li>SET ANSI_NULLS ON：只能使用IS NULL来判断值是否为NULL，而不能使用&#x3D;或&lt;&gt;来与NULL做比较，任何值包括NULL值与NULL值做&#x3D;或&lt;&gt;运算都得到FALSE</li>
+<li>SET ANSI_NULLS OFF：可以使用&#x3D;和&lt;&gt;来与NULL做BOOL运算</li>
+</ul>
+<hr>
+<h1 id="Excel"><a href="#Excel" class="headerlink" title="Excel"></a>Excel</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1660947286175591245&wfr=spider&for=pc">Excel中$是什么意思</a>，$在Excel中是对数据区域的绝对引用，表示固定单元格中的行列，没有$则表示相对引用<br>跨sheet操作只需要光标在参数前，点击对应sheet tab就行，同个参数只需要一次这样的操作</p>
+</blockquote>
+<p><strong>生成SQL：</strong></p>
+<ol>
+<li>这一列的文本类型选 <code>general </code></li>
+<li>公式文本框输入<code>=&quot;&#39;&quot;&amp;A1&amp;&quot;&#39;,&quot;</code></li>
+</ol>
+<p><strong>快速填充整列：</strong></p>
+<ol>
+<li>左上角输入 D2:D414716，按住ctrl+enter，光标移到公式后，继续按住ctrl+enter</li>
+</ol>
+<p><strong>判断两列内容是否相同：</strong></p>
+<ol>
+<li>这一列的文本类型选 <code>general </code></li>
+<li><code>=IF((A1=B1),TRUE,FALSE)</code></li>
+</ol>
+<p><strong>判断C列中的内容有没有在B列中出现过：</strong></p>
+<ol>
+<li>这一列的文本类型选 <code>general </code></li>
+<li><code>=COUNTIF(B:B,C2)</code></li>
+<li>指定范围并且跨sheet判断则是：<code>=COUNTIF(Sheet1!$B$1:Sheet1!$B$7,C1)</code></li>
+<li>结果为0的，就是B列中没有出现过的，而结果不为0，则是在B列中出现过</li>
+</ol>
+<p><strong>快速生成字母开头的连续序号：</strong></p>
+<ol>
+<li>这一列的文本类型选 <code>general </code></li>
+<li><code>=&quot;T&quot;&amp;TEXT(0+ROW(A1),&quot;0000&quot;)</code></li>
+<li>第一行就是T0001,下一行就是T0002</li>
+</ol>
+<p><strong>快速生成sql的in条件（2000个参数）：</strong></p>
+<ol>
+<li>这一列的文本类型选 <code>general </code></li>
+<li><code>=IF(EXACT(MOD(ROW()-2,2000),0),=TEXTJOIN(&quot;&#39; ,&#39; &quot;,TRUE,A2:A2001),&quot;&quot;)</code></li>
+<li>结果：1’,’2’,’3….’,’2000</li>
+</ol>
+<p><strong>快速根据key获取key所在行的所有数据：</strong></p>
+<ol>
+<li>在sheet2中根据A列的值获取sheet1中A列对应值所在行的所有数据</li>
+<li>将sheet2的B列的文本类型选 <code>general </code></li>
+<li><code>=VLOOKUP($A1,Sheet1!$A$2:$AL$1001,COLUMN(Sheet1!B1),0)</code></li>
+<li>$A1是要基于其返回整行的查找值， Sheet1!$A$2:$AL$1001是要查找的数据范围， COLUMN(Sheet1!B1)表示数据范围内的第二列号，0表示精确查找</li>
+<li>数据量太大导致卡死，可参考<a target="_blank" rel="noopener" href="http://www.360doc.com/content/21/0704/21/73091064_985122855.shtml">Power Query进行数据合并</a></li>
+</ol>
+<hr>
+<h1 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h1><p><a target="_blank" rel="noopener" href="http://jmockit.cn/index.htm">JMockit中文网</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://nanzx.gitee.io">阿楠</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://nanzx.gitee.io/posts/24756/">https://nanzx.gitee.io/posts/24756/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://nanzx.gitee.io" target="_blank">Nan</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%80%BB%E7%BB%93/">总结</a></div><div class="post_share"><div class="social-share" data-image="https://unpkg.com/nan-picture/img/wp9.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://unpkg.com/nan-picture/img/微信收款码.jpg" target="_blank"><img class="post-qr-code-img" src="https://unpkg.com/nan-picture/img/微信收款码.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://unpkg.com/nan-picture/img/支付宝收款码.jpg" target="_blank"><img class="post-qr-code-img" src="https://unpkg.com/nan-picture/img/支付宝收款码.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/25250/" title="油猴编写CSDN脚本"><img class="cover" src="https://unpkg.com/nan-picture/img/wp11.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">油猴编写CSDN脚本</div></div></a></div><div class="next-post pull-right"><a href="/posts/38577/" title="总结"><img class="cover" src="https://unpkg.com/nan-picture/img/wp8.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">总结</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/38577/" title="总结"><img class="cover" src="https://unpkg.com/nan-picture/img/wp8.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-02</div><div class="title">总结</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Notepad"><span class="toc-number">1.</span> <span class="toc-text">Notepad++</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL"><span class="toc-number">2.</span> <span class="toc-text">SQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E5%89%8D%E7%9A%84%E5%88%A4%E6%96%AD"><span class="toc-number">2.1.</span> <span class="toc-text">操作前的判断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">2.2.</span> <span class="toc-text">索引的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">2.3.</span> <span class="toc-text">列的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%B8%8B%E4%B8%80%E4%B8%AAsequence"><span class="toc-number">2.4.</span> <span class="toc-text">获取下一个sequence</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%A1%A8%E9%94%81%E7%BA%A7%E5%88%AB"><span class="toc-number">2.5.</span> <span class="toc-text">查看表锁级别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E5%8C%85%E5%90%AB%E6%9F%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="toc-number">2.6.</span> <span class="toc-text">查包含某字符串的存储过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E4%B8%8D%E5%8C%85%E5%90%AB%E6%95%B0%E5%AD%97"><span class="toc-number">2.7.</span> <span class="toc-text">查看不包含数字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2SQL%E6%89%A7%E8%A1%8C%E6%97%B6CPU%E7%9A%84%E5%8D%A0%E7%94%A8%E6%83%85%E5%86%B5"><span class="toc-number">2.8.</span> <span class="toc-text">查询SQL执行时CPU的占用情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A6%E5%8F%91%E5%99%A8%E8%AE%B0%E5%BD%95%E6%95%B0%E6%8D%AE%E7%9A%84IUD%E6%93%8D%E4%BD%9C"><span class="toc-number">2.9.</span> <span class="toc-text">触发器记录数据的IUD操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8C%87%E5%AE%9Aschema%E4%B8%8B%E6%89%80%E6%9C%89%E8%A1%A8%E6%98%AF%E5%90%A6%E6%9C%89%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F%E5%92%8C%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95-SQL-Server"><span class="toc-number">2.10.</span> <span class="toc-text">查看数据库指定schema下所有表是否有主键约束和唯一索引(SQL Server)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ISNULL%E4%B8%8ENULLIF%E5%87%BD%E6%95%B0%E5%8C%BA%E5%88%AB-SQL-Server"><span class="toc-number">2.11.</span> <span class="toc-text">ISNULL与NULLIF函数区别(SQL Server)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%8F%82%E6%95%B0-QUOTED-IDENTIFIER-%E5%92%8C-ANSI-NULLS"><span class="toc-number">2.12.</span> <span class="toc-text">存储过程的两个参数(QUOTED_IDENTIFIER 和 ANSI_NULLS)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Excel"><span class="toc-number">3.</span> <span class="toc-text">Excel</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95"><span class="toc-number">4.</span> <span class="toc-text">单元测试</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By 阿楠</div><div class="footer_custom_text">世间总有赏不尽的繁华，也有尝不完的辛苦，若内心旖旎，穷山恶水也会云卷云舒。</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.nanzx.top/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.nanzx.top/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.textContent = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo.nanzx.top/',
+        region: '',
+        pageSize: 3,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (false) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="7500003406" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="true" data-lrctype="0"></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
