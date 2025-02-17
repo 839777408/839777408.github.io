@@ -1,0 +1,58 @@
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: 'iconfont';  /* Project id 1959506 */
+    src: url('//at.alicdn.com/t/c/font_1959506_skhxeuyy1pi.woff2?t=1688312572349') format('woff2'),
+    url('//at.alicdn.com/t/c/font_1959506_skhxeuyy1pi.woff?t=1688312572349') format('woff'),
+    url('//at.alicdn.com/t/c/font_1959506_skhxeuyy1pi.ttf?t=1688312572349') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wangyiyunyinleclick:before {
+    content: "\e600";
+    font-size: 20px;
+    color: #e72d2c
+}
+
+.icon-qq:before {
+    content: "\e601";
+    color: rgb(16, 164, 255);
+}
+
+.icon-weixin:before {
+    content: "\e626";
+    color: #00bf03
+}
+
+.icon-bilibili:before {
+    content: "\e604";
+    color: rgb(212, 35, 122);
+}
+
+.icon-gitee:before {
+    content: "\e60c";
+    color: #d81e06
+}
+
+.icon-github:before {
+    content: "\e611";
+    color: #515151
+}
+
+.custom:not(.no-icon)::before {
+    font-family: "iconfont";
+    color: var(--icon-color, #333);
+}
+
+.note.custom {
+    background-color: #f7f7f7;
+    border-left-color: #777;
+    display: block;
+}
